@@ -8,4 +8,4 @@
     - name: "remove existing image"
       shell: "docker rmi surajrao97/hello-world"
     - name: "creating a docker container"
-      shell: "docker run -d --name ansible-docker -p 8090:8080 surajrao97/hello-world"
+      shell: "docker run -d --name hello-world -p 8090:8080 surajrao97/hello-world"

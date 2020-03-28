@@ -1,0 +1,11 @@
+---
+- 
+  become: true
+  hosts: webservers
+  tasks:
+    - name: "remove existing container"
+      shell: "docker rm -f hello-world"
+    - name: "remove existing image"
+      shell: "docker rmi surajrao97/hello-world"
+    - name: "creating a docker container"
+      shell: "docker run -d --name ansible-docker -p 8090:8080 surajrao97/hello-world"
